@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140722174232) do
+ActiveRecord::Schema.define(version: 20140722215637) do
 
   create_table "companies", force: true do |t|
     t.string   "name"
@@ -31,7 +31,10 @@ ActiveRecord::Schema.define(version: 20140722174232) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "rank"
+    t.integer  "resume_id"
   end
+
+  add_index "educations", ["resume_id"], name: "index_educations_on_resume_id"
 
   create_table "experiences", force: true do |t|
     t.string   "position"
@@ -41,7 +44,12 @@ ActiveRecord::Schema.define(version: 20140722174232) do
     t.integer  "rank"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "resume_id"
+    t.integer  "user_id"
   end
+
+  add_index "experiences", ["resume_id"], name: "index_experiences_on_resume_id"
+  add_index "experiences", ["user_id"], name: "index_experiences_on_user_id"
 
   create_table "postings", force: true do |t|
     t.string   "skills"
@@ -50,7 +58,10 @@ ActiveRecord::Schema.define(version: 20140722174232) do
     t.string   "postition"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "company_id"
   end
+
+  add_index "postings", ["company_id"], name: "index_postings_on_company_id"
 
   create_table "resumes", force: true do |t|
     t.string   "first_name"
@@ -63,14 +74,22 @@ ActiveRecord::Schema.define(version: 20140722174232) do
     t.string   "career_statement"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "posting_id"
   end
+
+  add_index "resumes", ["posting_id"], name: "index_resumes_on_posting_id"
 
   create_table "skills", force: true do |t|
     t.string   "name"
     t.integer  "rank"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "resume_id"
+    t.integer  "user_id"
   end
+
+  add_index "skills", ["resume_id"], name: "index_skills_on_resume_id"
+  add_index "skills", ["user_id"], name: "index_skills_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "first_name"
