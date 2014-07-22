@@ -20,6 +20,7 @@ SQlite3 - `$ sqlite3 --version`
 
 Basic Run Configuration to boot and load the application:
 
+- cd Dynamic
 - bundle
 - rake db:migrate
 - rails server
