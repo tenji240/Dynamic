@@ -14,7 +14,9 @@ Ruby Version: `$ ruby -v`
 _Should be something like `ruby 2.1.2p95`, at least Ruby 2.0_
 
 Rails Version: `$ rails -v`
-_Something Like`Rails 4.1.1`, at least Rails 4_
+_Something like `Rails 4.1.1`, at least Rails 4_
+
+SQlite3 - `$ sqlite3 --version`
 
 Basic Run Configuration to boot and load the application:
 
