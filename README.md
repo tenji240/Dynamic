@@ -1,0 +1,28 @@
+Dynamic [Ruby]
+==========
+
+This is the Dynamic Ruby Version of the Hackathon Dynamic Application. This base app has the following items implemented:
+
+- Base Rails Application
+
+Development Environment (MAC)
+----------------------------
+
+>the following instructions apply to a OSX/UNIX Implementation
+
+Ruby Version: `$ ruby -v`
+_Should be something like `ruby 2.1.2p95`, at least Ruby 2.0_
+
+Rails Version: `$ rails -v`
+_Something Like`Rails 4.1.1`, at least Rails 4_
+
+Basic Run Configuration to boot and load the application:
+
+- bundle
+- rake db:migrate
+- rails server
+
+To Load Console
+
+ - rails console (gives you access to the database elements and attributes of such objects)
+
