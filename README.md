@@ -28,3 +28,4 @@ To Load Console
 
  - rails console (gives you access to the database elements and attributes of such objects)
 
+[Google Doc](https://docs.google.com/document/d/1b56ba0W-rl5w9EGljsLNwYqDjEBy4CMDUjBf5BWccWY/edit?usp=sharing) for editing and app schema and stuff. 
