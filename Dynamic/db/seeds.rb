@@ -51,8 +51,23 @@ users = User.create([{
 
 puts "User Data is Complete"
 
-companies = Company.create([{
-    
-  },])
+companies = Company.create({
+     name: 'Waterloo',
+     address: '10 Main Street',
+     city: 'AnyTown',
+     state: 'Kanas',
+     zip: '40010'
+  })
+
+puts "Created Base Company"
+
+postings = Posting.create({
+    company_id: Company.first,
+    description: 'This is my job profile. We are a baller company. We need some Ruby on Rails Developers to Fix our Stuff',
+    experience: 'BS/MS Degree or 2 Years Full Stack',
+    postition: 'Full Time'
+  })
+
+puts "created Base Posting"
 
 puts "Generation of Seed Data is Complete"
